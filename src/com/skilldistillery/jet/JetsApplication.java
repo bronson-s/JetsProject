@@ -16,7 +16,11 @@ public class JetsApplication {
 		while (choice != 9) {
 			displaymenu();
 			System.out.println("please enter the number of choice you would like to perfom");
-			choice = kb.nextInt();
+			try {
+				choice = kb.nextInt();
+			} catch (Exception e) {
+				System.out.println("please enter a number");
+			}
 			kb.nextLine();
 			if (choice == 1) {
 				airF.printList();
